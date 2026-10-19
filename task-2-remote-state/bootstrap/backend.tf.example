@@ -1,0 +1,11 @@
+# Not active. Copy to backend.tf only after the first apply has created the bucket.
+# Then: terraform init -migrate-state
+# Use a different key from Task 1. The two roots must not share a state object.
+
+terraform {
+  backend "s3" {
+    key            = "task2/bootstrap/terraform.tfstate"
+    encrypt        = true
+    dynamodb_table = "arrise-terraform-locks"
+  }
+}

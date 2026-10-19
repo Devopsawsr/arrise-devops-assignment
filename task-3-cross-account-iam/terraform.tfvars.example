@@ -1,0 +1,10 @@
+account_a_profile  = "account-a"
+account_b_profile  = "account-b"
+account_a_id       = "000000000000"
+account_b_id       = "111111111111"
+group2_users       = ["jagan", "priya"]
+role_c_bucket_name = "replace-with-a-globally-unique-bucket-name"
+
+# Enabled only to demonstrate the access methods requested by the assignment.
+# Keep false in a real production deployment and use temporary credentials.
+create_access_keys = true

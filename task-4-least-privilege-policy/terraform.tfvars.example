@@ -1,0 +1,9 @@
+region                   = "us-east-1"
+account_id               = "000000000000"
+ecr_repository_name      = "app"
+ecs_cluster_name         = "app"
+ecs_service_name         = "app"
+task_execution_role_name = "app-execution"
+task_role_name           = "app-task"
+artifacts_bucket_name    = "app-build-artifacts"
+attach_to_ci_user        = false

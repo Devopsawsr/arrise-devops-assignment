@@ -1,0 +1,4 @@
+region             = "us-east-1"
+account_b_profile  = "account-b"
+account_a_id       = "000000000000"
+bucket_name        = "the-one-bucket"

@@ -1,0 +1,46 @@
+region      = "us-east-1"
+environment = "dev"
+owner       = "jagan"
+
+vpc_id    = "vpc-replace-me"
+subnet_id = "subnet-replace-me"
+
+instances = {
+  edge = {
+    instance_type        = "t3.micro"
+    root_volume_type     = "standard"
+    root_volume_size     = 10
+    key_name             = "edge-key"
+    protect_from_destroy = false
+  }
+  web = {
+    instance_type        = "t3.small"
+    root_volume_type     = "gp2"
+    root_volume_size     = 20
+    key_name             = "web-key"
+    protect_from_destroy = false
+  }
+  api = {
+    instance_type        = "t3.medium"
+    root_volume_type     = "gp3"
+    root_volume_size     = 30
+    key_name             = "api-key"
+    protect_from_destroy = false
+  }
+  worker = {
+    instance_type        = "m5.large"
+    root_volume_type     = "io1"
+    root_volume_size     = 50
+    root_volume_iops     = 1000
+    key_name             = "worker-key"
+    protect_from_destroy = false
+  }
+  data-store = {
+    instance_type        = "r5.large"
+    root_volume_type     = "io2"
+    root_volume_size     = 100
+    root_volume_iops     = 3000
+    key_name             = "data-store-key"
+    protect_from_destroy = true
+  }
+}

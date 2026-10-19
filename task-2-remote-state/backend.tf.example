@@ -1,0 +1,11 @@
+# This block is applied from task-1-ec2-provisioning/backend.tf.
+# It is not a .tf file in this directory. terraform init here would create an empty stack.
+# Bucket, region, and the lock table name are in task-1-ec2-provisioning/backend.hcl.
+# dynamodb_table there must match lock_table_name from this bootstrap.
+
+terraform {
+  backend "s3" {
+    key     = "task1/ec2-fleet/terraform.tfstate"
+    encrypt = true
+  }
+}

@@ -1,0 +1,3 @@
+bucket         = "replace-with-the-bootstrap-bucket-name"
+region         = "us-east-1"
+dynamodb_table = "arrise-terraform-locks"
